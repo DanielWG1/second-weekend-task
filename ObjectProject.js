@@ -17,34 +17,36 @@ function ProgrammingTasks(startedAt, finishedAt, tasksGiven, tasksFinished, topi
     };
     this.tasksPercentLevel= function() {
         if(this.tasksFinishedPrecent() <= 50)
-        return 'POOR';
+            return 'POOR';
         if(this.tasksFinishedPrecent() <= 75)
-        return 'MEDIUM';
+            return 'MEDIUM';
         return 'GOOD';
     }
     this.topic= topic;
 }
 
-let tasksConclusion= [];
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 13:00"), 
-new Date("2021-01-20: 13:30"), 10, 9, 'HTML'));
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 10:00"), 
-new Date("2021-01-20: 20:00"), 13, 8, 'JavaScript'));
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 06:00"), 
-new Date("2021-01-20: 22:00"), 20, 14, 'CSS'));
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 14:30"), 
-new Date("2021-01-20: 15:00"), 7, 5, 'Github'));
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-21: 09:00"), 
-new Date("2021-01-21: 19:30"), 9, 3, 'loops'));
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 08:00"), 
-new Date("2021-01-20: 21:00"), 18, 13, 'arrays'));
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-19: 19:00"), 
-new Date("2021-01-19: 23:30"), 11, 4, 'objects'));
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-14: 10:00"), 
-new Date("2021-01-14: 19:30"), 14, 10, 'values'));
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-12: 08:00"), 
-    new Date("2021-01-12: 12:00"), 15, 8, 'functions'));
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-13: 07:00"), 
-    new Date("2021-01-13: 18:00"), 20, 18, 'strings'));
-   
-console.log(tasksConclusion);
+function loadData(){
+    let tasksConclusion= [];
+    tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 13:00"), 
+        new Date("2021-01-20: 13:30"), 10, 9, 'HTML'));
+    tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 10:00"), 
+        new Date("2021-01-20: 20:00"), 13, 8, 'JavaScript'));
+    tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 06:00"), 
+        new Date("2021-01-20: 22:00"), 20, 14, 'CSS'));
+    tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 14:30"), 
+        new Date("2021-01-20: 15:00"), 7, 5, 'Github'));
+    tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-21: 09:00"), 
+        new Date("2021-01-21: 19:30"), 9, 3, 'loops'));
+    tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 08:00"), 
+        new Date("2021-01-20: 21:00"), 18, 13, 'arrays'));
+    tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-19: 19:00"), 
+        new Date("2021-01-19: 23:30"), 11, 4, 'objects'));
+    tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-14: 10:00"), 
+        new Date("2021-01-14: 19:30"), 14, 10, 'values'));
+    tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-12: 08:00"), 
+        new Date("2021-01-12: 12:00"), 15, 8, 'functions'));
+    tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-13: 07:00"), 
+        new Date("2021-01-13: 18:00"), 20, 18, 'strings'));
+
+    return tasksConclusion;   
+}

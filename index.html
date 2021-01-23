@@ -8,8 +8,8 @@
 <script>
     function createCell(tr, text){
         let td= document.createElement("TD");
-        tr.appendChild(td);
         td.innerHTML= text;
+        tr.appendChild(td);
         return td;
     }
    
@@ -18,14 +18,16 @@
             return 'poorTime';
         } if(totalTime==='MEDIUM') {
             return 'mediumTime';
-        } return 'goodTime';
+        } 
+        return 'goodTime';
     } 
     function calculateTasksClass(tasksFinishedPrecent) {
         if(tasksFinishedPrecent==='POOR') {
             return 'poorTasks';
         } if(tasksFinishedPrecent==='MEDIUM') {
             return 'mediumTasks';
-        } return 'goodTasks';
+        } 
+        return 'goodTasks';
     } 
 
    
@@ -53,22 +55,23 @@
     </div>
     <script src="ObjectProject.js"></script> 
     <script>
+        tasksConclusion = loadData();
         let t = document.getElementById('taskTableBody');
         for (row of tasksConclusion) {
             let tr= document.createElement("TR");
             t.appendChild(tr);
             tr.setAttribute('class', 'tableRow');
-            let td = createCell(tr, row.startedAt.toLocaleTimeString());    
-            td = createCell(tr, row.finishedAt.toLocaleTimeString());    
-            td = createCell(tr, row.totalTime());
+            createCell(tr, row.startedAt.toLocaleTimeString());    
+            createCell(tr, row.finishedAt.toLocaleTimeString());    
+            let td = createCell(tr, row.totalTime());
             let clazz = calcTotalTimeClass(row.studyTimeLevel());
             td.setAttribute('class', clazz)
-            td = createCell(tr, row.tasksGiven);    
-            td = createCell(tr, row.tasksFinished);    
+            createCell(tr, row.tasksGiven);    
+            createCell(tr, row.tasksFinished);    
             td = createCell(tr, Math.round(row.tasksFinishedPrecent()));
             clazz = calculateTasksClass(row.tasksPercentLevel());
             td.setAttribute('class', clazz);
-            td = createCell(tr, row.topic);    
+            createCell(tr, row.topic);    
         }
     </script>
 </body>
