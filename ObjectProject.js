@@ -27,19 +27,19 @@ function ProgrammingTasks(startedAt, finishedAt, tasksGiven, tasksFinished, topi
 
 let tasksConclusion= [];
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 13:00"), 
-new Date("2021-01-20: 19:00"), 10, 9, 'HTML'));
+new Date("2021-01-20: 13:30"), 10, 9, 'HTML'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 10:00"), 
 new Date("2021-01-20: 20:00"), 13, 8, 'JavaScript'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 06:00"), 
 new Date("2021-01-20: 22:00"), 20, 14, 'CSS'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 14:30"), 
-new Date("2021-01-20: 20:00"), 7, 5, 'Github'));
+new Date("2021-01-20: 15:00"), 7, 5, 'Github'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-21: 09:00"), 
-new Date("2021-01-21: 19:30"), 9, 8, 'loops'));
+new Date("2021-01-21: 19:30"), 9, 3, 'loops'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 08:00"), 
 new Date("2021-01-20: 21:00"), 18, 13, 'arrays'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-19: 19:00"), 
-new Date("2021-01-19: 23:30"), 11, 8, 'objects'));
+new Date("2021-01-19: 23:30"), 11, 4, 'objects'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-14: 10:00"), 
 new Date("2021-01-14: 19:30"), 14, 10, 'values'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-12: 08:00"), 

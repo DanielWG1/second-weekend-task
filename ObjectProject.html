@@ -34,7 +34,8 @@
 </head>
 <body>
     <div>
-        <table id='taskTable' class="table-class">
+        <table  class="table-class">
+            <thead>
             <tr class="thead">
                 <th>Start time</th>
                 <th>Finish time</th>
@@ -44,11 +45,15 @@
                 <th>Tasks finished %</th>
                 <th>Topic</th>
             </tr>
+        </thead>
+        <tbody id='taskTableBody'>
+
+        </tbody>
         </table>
     </div>
     <script src="ObjectProject.js"></script> 
     <script>
-        let t = document.getElementById('taskTable');
+        let t = document.getElementById('taskTableBody');
         for (row of tasksConclusion) {
             let tr= document.createElement("TR");
             t.appendChild(tr);
