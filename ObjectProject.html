@@ -4,32 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./ObjectProject.css">
-    <title>Document</title>
-</head class="a">
+    <title>Cyber4s Calendar</title>
+<script>
+    function createCell(tr, text){
+        let td= document.createElement("TD");
+        tr.appendChild(td);
+        td.innerHTML= text;
+        return td;
+    }
+   
+    function calcTotalTimeClass(totalTime) {
+        if(totalTime==='POOR') {
+            return 'poorTime';
+        } if(totalTime==='MEDIUM') {
+            return 'mediumTime';
+        } return 'goodTime';
+    } 
+    function calculateTasksClass(tasksFinishedPrecent) {
+        if(tasksFinishedPrecent==='POOR') {
+            return 'poorTasks';
+        } if(tasksFinishedPrecent==='MEDIUM') {
+            return 'mediumTasks';
+        } return 'goodTasks';
+    } 
+
+   
+</script>
+
+</head>
 <body>
     <div>
-        <table>
-            <tr>
+        <table id='taskTable' class="table-class">
+            <tr class="thead">
                 <th>Start time</th>
                 <th>Finish time</th>
                 <th>Total time</th>
                 <th>Tasks given</th>
                 <th>Tasks made</th>
-                <th>Percentage of made tasks</th>
+                <th>Tasks finished %</th>
                 <th>Topic</th>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <script></script>
         </table>
     </div>
-    <script src="./ObjectProject.js"></script>
+    <script src="ObjectProject.js"></script> 
+    <script>
+        let t = document.getElementById('taskTable');
+        for (row of tasksConclusion) {
+            let tr= document.createElement("TR");
+            t.appendChild(tr);
+            tr.setAttribute('class', 'tableRow');
+            let td = createCell(tr, row.startedAt.toLocaleTimeString());    
+            td = createCell(tr, row.finishedAt.toLocaleTimeString());    
+            td = createCell(tr, row.totalTime());
+            let clazz = calcTotalTimeClass(row.studyTimeLevel());
+            td.setAttribute('class', clazz)
+            td = createCell(tr, row.tasksGiven);    
+            td = createCell(tr, row.tasksFinished);    
+            td = createCell(tr, Math.round(row.tasksFinishedPrecent()));
+            clazz = calculateTasksClass(row.tasksPercentLevel());
+            td.setAttribute('class', clazz);
+            td = createCell(tr, row.topic);    
+        }
+    </script>
 </body>
 </html>

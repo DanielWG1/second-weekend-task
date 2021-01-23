@@ -24,6 +24,7 @@ function ProgrammingTasks(startedAt, finishedAt, tasksGiven, tasksFinished, topi
     }
     this.topic= topic;
 }
+
 let tasksConclusion= [];
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 13:00"), 
 new Date("2021-01-20: 19:00"), 10, 9, 'HTML'));
@@ -33,7 +34,7 @@ tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 06:00"),
 new Date("2021-01-20: 22:00"), 20, 14, 'CSS'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 14:30"), 
 new Date("2021-01-20: 20:00"), 7, 5, 'Github'));
-tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-22: 09:00"), 
+tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-21: 09:00"), 
 new Date("2021-01-21: 19:30"), 9, 8, 'loops'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-20: 08:00"), 
 new Date("2021-01-20: 21:00"), 18, 13, 'arrays'));
@@ -42,6 +43,8 @@ new Date("2021-01-19: 23:30"), 11, 8, 'objects'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-14: 10:00"), 
 new Date("2021-01-14: 19:30"), 14, 10, 'values'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-12: 08:00"), 
-new Date("2021-01-12: 12:00"), 15, 8, 'functions'));
+    new Date("2021-01-12: 12:00"), 15, 8, 'functions'));
 tasksConclusion.push(new ProgrammingTasks(new Date("2021-01-13: 07:00"), 
-new Date("2021-01-13: 18:00"), 20, 18, 'strings'));
+    new Date("2021-01-13: 18:00"), 20, 18, 'strings'));
+   
+console.log(tasksConclusion);
