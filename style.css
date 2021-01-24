@@ -1,0 +1,51 @@
+
+.table-class {
+    color: black;
+    background-color: white;
+    border-collapse: collapse;  
+    margin-left:  22%;
+    width: 60%;
+
+}
+div {
+    margin-top: 8%;
+}
+.table-class tr{
+    border: 1px solid black;
+
+}
+.table-class tbody tr:hover {
+    background-color: lightskyblue;
+}
+.table-class td {
+    text-align: center;
+}
+
+.thead {
+    background-color: lightgray;
+    border: 1px solid black;
+    
+}
+.thead th {
+    border: 1px solid black;
+}
+.poorTime {
+    background-color: lightgreen;
+}
+.mediumTime {
+    background-color: orange;
+}
+.goodTime {
+    background-color: red;
+}
+.poorTasks {
+    background-color: lightblue;
+}
+.mediumTasks {
+background-color: blue;
+}
+.goodTasks {
+background-color: darkblue;
+}
+.tableRow {
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cyber4s Calendar</title>
+<script>
+    function createCell(text){
+        document.write("<TD>"+ text +"</TD>");
+    }
+   
+    function calcTotalTimeClass(totalTime) {
+        if(totalTime==='POOR') {
+            return 'poorTime';
+        } if(totalTime==='MEDIUM') {
+            return 'mediumTime';
+        } 
+        return 'goodTime';
+    } 
+    function calculateTasksClass(tasksFinishedPrecent) {
+        if(tasksFinishedPrecent==='POOR') {
+            return 'poorTasks';
+        } if(tasksFinishedPrecent==='MEDIUM') {
+            return 'mediumTasks';
+        } 
+        return 'goodTasks';
+    } 
+</script>
+
+</head>
+<body>
+
+    <div>
+        <table  class="table-class">
+            <thead>
+            <tr class="thead">
+                <th>Start time</th>
+                <th>Finish time</th>
+                <th>Total time</th>
+                <th>Tasks given</th>
+                <th>Tasks made</th>
+                <th>Tasks finished %</th>
+                <th>Topic</th>
+            </tr>
+        </thead>
+        <tbody id='taskTableBody'>
+            <script src="main.js"></script> 
+
+            <script>
+                tasksConclusion = loadData();
+                for (row of tasksConclusion) {
+                    document.write("<tr class='tableRow'>");
+                    createCell(row.startedAt.toLocaleTimeString());    
+                    createCell(row.finishedAt.toLocaleTimeString()); 
+                    let clazz = calcTotalTimeClass(row.studyTimeLevel());
+                    document.write("<TD class=" +clazz+">" + row.totalTime() + "</TD>");
+                    createCell(row.tasksGiven);    
+                    createCell(row.tasksFinished);   
+                    clazz = calculateTasksClass(row.tasksPercentLevel());
+                    document.write("<TD class=" +clazz+ ">" + Math.round(row.tasksFinishedPrecent()) + "</TD>");
+                    createCell(row.topic);
+                    document.write('</tr>');
+                }
+            </script>
+        </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
